@@ -1,0 +1,5 @@
+<h2>All Posts</h2>
+            <div>
+            <button onClick={ handleUpdatePost}>Update</button>
+            <button onClick={ handleDeletePost}>Delete</button>
+             </div>

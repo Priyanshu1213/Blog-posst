@@ -1,0 +1,71 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: auto;
+  
+}
+.h2{
+  margin-top: 0%;
+  font-size: larger;
+  font-weight: bold;
+  padding-left: 45%;
+  background-color: aqua;
+  
+}
+
+.post1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  
+  height: auto;
+}
+
+.post1 h1, .post1 p {
+  
+  margin-bottom:-10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.post1 h1 {
+
+  font-weight: bold;
+  background-color: #f7f7f7;
+    color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.post1 p{
+  margin-bottom: 20px;
+  height: auto;
+  width: 90%;
+  background-color: #f7f7f7;
+    color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* .post1 button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 0%;
+  
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.post1 button[type="submit"]:hover {
+  background-color: #3e8e41;
+} */
+
+  
