@@ -1,17 +1,24 @@
 import React from 'react'
 import './Profile.css'
-import Navbar2 from '../Navbar/Navbar'
+import Navbar2 from '../Navbar/Navbar2'
 import axios from 'axios';
 import  { useState, useEffect } from 'react';
 import { useNavigate,useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function Profile (props) {
     
     const location= useLocation();
+
+    const selctore= useSelector((state)=>state.Adding)
+    console.log(selctore);
+    console.log("bur")
+
+
     // console.log((location.state).length)
     // console.log("location.state324")
     // const emailid=(location.state)[0].email
-const[emailid2,setemailid2]=useState("Anoop12@gmail.com")
+const[emailid2,setemailid2]=useState("Anoop2@gmail.com")
 
     const [data, setData]=useState([]);
 
@@ -20,7 +27,7 @@ const[emailid2,setemailid2]=useState("Anoop12@gmail.com")
     const Navigate = new useNavigate();
 
 function create(){
-    Navigate("/create"  ,{state:location.state})
+    Navigate("/create"  ,{state:selctore})
 }
 
 useEffect(()=>{
@@ -34,26 +41,32 @@ useEffect(()=>{
           console.log(error)
       }
     } 
-    if(((location.state).length)===1){
-        setemailid2((location.state)[0].email)
+    // if(((location.state).length)===1){
+    //     setemailid2((location.state)[0].email)
             
-        }
+    //     }
         
     temp()
-},[])
-
+},[selctore])
 
 
 
 var postsofuser=[];
 
  for(let i=0;i<data.length;i++){
-    if(data[i].emailid===emailid2){
+    // if(data[i].emailid===emailid2){
+        if(data[i].emailid===selctore[0]){
+
         postsofuser.push(data[i])
 
     }
  }
 
+
+ function handledelete(emailid){
+    axios.delete(`http://localhost:5000/api/login1/${emailid}`)
+    
+}
 
 
 
@@ -88,7 +101,7 @@ var postsofuser=[];
             <button>Update</button>
             </div>
             <div className='c2'>
-            <button>Delete</button>
+            <button onClick={()=>handledelete(item.emailid)}>Delete</button>
             </div>
             
         </div>

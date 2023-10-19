@@ -38,7 +38,7 @@ const location = useLocation();
   return (
 <>
 <div>
-      <Navbar2  data={tep} />
+      <Navbar2  />
     </div>
     <div className='h2'>New Feeds</div>
     <div className='post'>

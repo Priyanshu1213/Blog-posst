@@ -20,7 +20,10 @@ export default function Create() {
     //   setTitle('');
     //   setContent('');
 
-      console.log(location.state[0].name)
+      console.log('yahipe hai  ${location.state}')
+      var tr=location.state[0];
+      console.log(tr[0])
+
     // };
     
 
@@ -34,9 +37,9 @@ export default function Create() {
             headers:{"content-Type":"application/json"
 
             },body:JSON.stringify({
-              emailid:location.state[0].email,
-              username:location.state[0].name,
-              password:location.state[0].pass,
+              emailid:tr[0],
+              username:"anoop",
+              password:tr[1],
               title:title,
               comment:content
 

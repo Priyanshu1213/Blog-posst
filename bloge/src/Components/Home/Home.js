@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios"
 import './Home.css'
 import { useNavigate } from 'react-router-dom'
+import {useDispatch } from "react-redux"
+import { AddtoCart } from '../../action';
 
 export default function Home() {
   
+  const dispatch = useDispatch();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [data, setData]=useState();
@@ -50,10 +53,14 @@ data.map(item=>{
       name=item.username;
   }
 })
+let ko=[username,password]
 if(comp===888){
   alert("you are loged in")
   Navigate("/post", {state:{pass:pass,
    email:email,name:name}})
+ dispatch(AddtoCart(ko))
+
+
 
 }else {
   alert("not valid")
@@ -68,7 +75,7 @@ if(comp===888){
   return (
   <div className="Container">
       
-        <h1>My Blog</h1> 
+        <h1>Login your Blogs</h1> 
         
         
           <form >

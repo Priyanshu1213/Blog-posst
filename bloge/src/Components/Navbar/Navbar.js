@@ -6,9 +6,9 @@ export default function Navbar() {
   function sign2(){
     navigate("/signup")
   }
-  function profile(){
-    navigate("/profile")
-  }
+  // function profile(){
+  //   navigate("/profile")
+  // }
 
   function login(){
     navigate("/firstpage")
@@ -22,7 +22,7 @@ export default function Navbar() {
         
         <div className='Nav2'>
         {/* <h3 onClick={profile}>Profile</h3> */}
-        <h4 onClick={login}>Login</h4>
+        <h3 onClick={login}>Login</h3>
             <h2 onClick={sign2}>Signup</h2>
         </div>
 

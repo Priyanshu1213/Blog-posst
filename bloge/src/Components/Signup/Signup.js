@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './Signup.css'
-import axios from "react-axios"
+
 
 
   
@@ -72,6 +72,8 @@ export default function Signup() {
       <Navbar/>
     </div>
     <div className='signup'>
+
+      <h1>Signup Your Blogs</h1>
         
         <form >
             <input type="text" placeholder="Username" value={username} onChange={ handleSignup} />

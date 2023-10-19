@@ -2,21 +2,37 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Navbar.css'
 
+
+
+import { useSelector } from 'react-redux';
+
 export default function Navbar(props) {
  const navigate =new  useNavigate();
 
- console.log(props.data)
- console.log("props.data")
+//  console.log(props.data)
+//  console.log("props.data")
+// const sel= useSelector();
+// console.log(sel)
 
 
-
+// const selctore= useSelector((state)=>state.Adding)
+//     console.log(selctore);
+//     console.log("bur")
+    
 
  
-  // function sign2(){
-  //   navigate("/signup")
-  // }
-  function profile(){
-    navigate("/profile",{state:props.data})
+  function post(){
+    navigate("/post")
+  }
+  function Profile(){
+    // navigate("/profile",{state:props.data})
+    navigate("/profile")
+
+
+
+    
+    
+
   }
 
   function login(){
@@ -30,8 +46,10 @@ export default function Navbar(props) {
         </div>
         
         <div className='Nav2'>
-        <h3 onClick={profile}>Profile</h3>
+        <h3 onClick={post}>All Post</h3>
+        <h3 onClick={Profile}>Profile</h3>
         <h2 onClick={login}>Log-out</h2>
+        {/* <h2 onClick={Tt}>Log-out2</h2> */}
         </div>
 
     </div>

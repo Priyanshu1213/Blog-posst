@@ -5,6 +5,7 @@ const {body, validationResult}= require("express-validator")
 const bodyparser=bodyParser.json();
 const signup=require("../schema/signup")
 const posttemp=require("../schema/post")
+
 router.get("/login",bodyparser,
    async (req,res)=>{
   
